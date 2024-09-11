@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WireApps.API\WireApps.Api.csproj" />
     <ProjectReference Include="..\WireApps.Data\WireApps.Data.csproj" />
   </ItemGroup>
 

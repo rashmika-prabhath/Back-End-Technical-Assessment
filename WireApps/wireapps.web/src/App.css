@@ -1,0 +1,30 @@
+/* src/App.css */
+.App {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-gap: 5px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid #333;
+}
+
+    .cell.hit {
+        background-color: red;
+    }
+
+    .cell.miss {
+        background-color: gray;
+    }
