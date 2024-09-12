@@ -102,8 +102,8 @@ public class GameControllerTests
         Assert.NotNull(okResult);
 
         // Check the response message for "Hit"
-        var response = okResult.Value as dynamic;
-        Assert.Equal("Hit!", response.message);
+        var response = okResult.Value as AttackResponse;
+        Assert.Equal("Hit!", response.Message);
     }
 
     [Fact]
@@ -141,8 +141,8 @@ public class GameControllerTests
         // Assert "Hit!"
         Assert.IsType<OkObjectResult>(result1);
         var okResult1 = result1 as OkObjectResult;
-        var response1 = okResult1.Value as dynamic;
-        Assert.Equal("Hit!", response1.message);
+        var response1 = okResult1.Value as AttackResponse;
+        Assert.Equal("Hit!", response1.Message);
 
         // Attack part 2 of the ship (should sink the ship)
         var attackRequest2 = new AttackRequest { Row = 0, Col = 1 };
@@ -151,7 +151,7 @@ public class GameControllerTests
         // Assert "Sunk!"
         Assert.IsType<OkObjectResult>(result2);
         var okResult2 = result2 as OkObjectResult;
-        var response2 = okResult2.Value as dynamic;
-        Assert.Equal("You sunk a Battleship!", response2.message);
+        var response2 = okResult2.Value as AttackResponse;
+        Assert.Equal("You sunk a Battleship!", response2.Message);
     }
 }

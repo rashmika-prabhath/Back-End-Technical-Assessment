@@ -61,7 +61,7 @@ const App: React.FC = () => {
                     ))
                 )}
             </div>
-            <p>{message}</p>
+            <p style={{fontWeight:700}}>{message}</p>
         </div>
     );
 };
